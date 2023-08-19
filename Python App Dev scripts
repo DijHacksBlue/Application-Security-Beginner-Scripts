@@ -44,3 +44,19 @@ def generate_waf_rules(url):
 
 if __name__ == "__main__":
   generate_waf_rules("https://www.example.com")
+
+Log analysis script
+
+Python
+import re
+
+def analyze_logs(log_file):
+  for line in log_file:
+    for pattern in patterns:
+      match = re.search(pattern, line)
+      if match:
+        print(match.group())
+
+if __name__ == "__main__":
+  with open("log.txt") as f:
+    analyze_logs(f) 
