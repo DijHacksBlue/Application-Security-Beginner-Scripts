@@ -1,0 +1,46 @@
+Vulnerability scanning script
+
+Python
+import requests
+
+def scan_for_vulnerabilities(url):
+  response = requests.get(url)
+  if response.status_code == 200:
+    for vulnerability in vulnerabilities:
+      if vulnerability in response.text:
+        print(f"Vulnerability found: {vulnerability}")
+
+if __name__ == "__main__":
+  scan_for_vulnerabilities("https://www.example.com")
+Use code with caution. Learn more
+This script scans the specified URL for known vulnerabilities. It uses the requests library to make a GET request to the URL. If the request is successful, the script checks the response text for any known vulnerabilities. If a vulnerability is found, the script prints the name of the vulnerability to the console.
+
+Penetration testing script
+
+Python
+import requests
+
+def simulate_attack(url):
+  response = requests.get(url, headers={"User-Agent": "Malicious User"})
+  if response.status_code == 200:
+    print("The attack was successful!")
+
+if __name__ == "__main__":
+  simulate_attack("https://www.example.com")
+Use code with caution. Learn more
+This script simulates a real-world attack on the specified URL. It uses the requests library to make a GET request to the URL, with the User-Agent header set to "Malicious User". If the request is successful, the script prints the message "The attack was successful!" to the console.
+
+Web application firewall (WAF) rule generation script
+
+Python
+import re
+
+def generate_waf_rules(url):
+  response = requests.get(url)
+  if response.status_code == 200:
+    for pattern in patterns:
+      rule = f"{pattern} deny"
+      print(rule)
+
+if __name__ == "__main__":
+  generate_waf_rules("https://www.example.com")
