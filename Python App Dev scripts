@@ -59,4 +59,4 @@ def analyze_logs(log_file):
 
 if __name__ == "__main__":
   with open("log.txt") as f:
-    analyze_logs(f) 
+    analyze_logs(f)
